@@ -5,7 +5,7 @@ import sys
 import re
 import urllib2
 import time
-from from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 
 # Exclude links that we dont need
 def excludes(link, website, outpath):
