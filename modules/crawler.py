@@ -5,7 +5,7 @@ import sys
 import re
 import urllib2
 import time
-from BeautifulSoup import BeautifulSoup
+from from bs4 import BeautifulSoup
 
 # Exclude links that we dont need
 def excludes(link, website, outpath):
@@ -90,7 +90,7 @@ def crawler(website, cdepth, cpause, outpath, logs, verbose):
           html_page = urllib2.urlopen(website)
           ordlstind += 1
 
-        soup = BeautifulSoup(html_page)
+        soup = BeautifulSoup(html_page, 'html.parser')
         
         # For each <a href=""> tag
         for link in soup.findAll('a'):        
